@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020-2022 The LineageOS Project
+ * Copyright (C) 2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.thermal;
+package org.lineageos.settings.refreshrate;
 
 import android.os.Bundle;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
-public class ThermalActivity extends CollapsingToolbarBaseActivity {
+public class RefreshActivity extends CollapsingToolbarBaseActivity {
 
-    private static final String TAG_THERMAL = "thermal";
+    private static final String TAG_REFRESH = "RefreshActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(
-                com.android.settingslib.collapsingtoolbar.R.id.content_frame,
-                new ThermalSettingsFragment(), TAG_THERMAL).commit();
+
+        getFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
+                new RefreshSettingsFragment(), TAG_REFRESH).commit();
     }
 
 }

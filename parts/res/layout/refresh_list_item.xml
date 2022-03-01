@@ -32,7 +32,7 @@
         android:scaleType="centerInside" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_marginStart="8dp"
@@ -61,13 +61,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-           <ImageView
+	            <ImageView
                 android:id="@+id/state"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:paddingStart="8dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_thermal_default" />
+                android:src="@drawable/ic_refresh_default" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
