@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.util.Log;
 
 import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.refreshrate.RefreshUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -35,6 +36,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             return;
         }
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
-        ThermalUtils.startService(context);
+        ThermalUtils.initialize(context);
+        RefreshUtils.initialize(context);        
     }
 }
