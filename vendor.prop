@@ -19,11 +19,11 @@ persist.vendor.audio.fluence.tmic.enabled=false
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=false
-persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.ring.filter.mask=0
 persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
+persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.audio.ssr=false
 ro.vendor.audio.game.effect=true
@@ -31,17 +31,36 @@ ro.vendor.audio.ring.filter=true
 ro.vendor.audio.scenario.support=true
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
+ro.vendor.audio.sfx.audiovisual=true
 ro.vendor.audio.sfx.earadj=true
 ro.vendor.audio.sfx.scenario=true
 ro.vendor.audio.sos=true
 ro.vendor.audio.soundfx.type=mi
 ro.vendor.audio.soundfx.usb=true
+ro.vendor.audio.soundtrigger.appdefine.cnn.level=35
+ro.vendor.audio.soundtrigger.appdefine.gmm.level=55
+ro.vendor.audio.soundtrigger.appdefine.gmm.user.level=65
+ro.vendor.audio.soundtrigger.appdefine.vop.level=10
+ro.vendor.audio.soundtrigger.lowpower=true
+ro.vendor.audio.soundtrigger.snr=16
+ro.vendor.audio.soundtrigger.training.level=50
+ro.vendor.audio.soundtrigger.xanzn.cnn.level=80
+ro.vendor.audio.soundtrigger.xanzn.gmm.level=45
+ro.vendor.audio.soundtrigger.xanzn.gmm.user.level=30
+ro.vendor.audio.soundtrigger.xanzn.vop.level=10
+ro.vendor.audio.soundtrigger.xatx.cnn.level=45
+ro.vendor.audio.soundtrigger.xatx.gmm.level=50
+ro.vendor.audio.soundtrigger.xatx.gmm.user.level=40
+ro.vendor.audio.soundtrigger.xatx.vop.level=0
+ro.vendor.audio.soundtrigger=sva
 ro.vendor.audio.surround.support=true
 ro.vendor.audio.us.proximity=true
 ro.vendor.audio.vocal.support=true
 ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.youme.support=true
+ro.vendor.audio.voice.volume.boost=none
 tunnel.audio.encode=true
+vendor.audio.adm.buffering.ms=2
 vendor.audio.capture.enforce_legacy_copp_sr=true
 vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
@@ -90,6 +109,8 @@ vendor.audio.feature.wsa.enable=false
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.output.suspend.supported=false
 vendor.audio.hw.aac.encoder=true
+vendor.audio.mic.status=off
+vendor.audio.offload.buffer.size.kb=256
 vendor.audio.offload.gapless.enabled=true
 vendor.audio.offload.multiaac.enable=true
 vendor.audio.offload.multiple.enabled=false
@@ -98,6 +119,7 @@ vendor.audio.offload.track.enable=false
 vendor.audio.parser.ip.buffer.size=262144
 vendor.audio.safx.pbe.enabled=false
 vendor.audio.spkcal.copy.inhal=true
+vendor.audio.spkr_prot.tx.sampling_rate=48000
 vendor.audio.tunnel.encode=false
 vendor.audio.usb.disable.sidetone=true
 vendor.audio.use.sw.alac.decoder=true
@@ -105,6 +127,7 @@ vendor.audio.use.sw.ape.decoder=true
 vendor.audio.use.sw.mpegh.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
 vendor.audio_hal.in_period_size=144
+vendor.audio_hal.period_multiplier=2
 vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
 
@@ -117,6 +140,7 @@ bluetooth.profile.avrcp.target.enabled?=true
 bluetooth.profile.bap.broadcast.assist.enabled?=true
 bluetooth.profile.bap.unicast.client.enabled?=true
 bluetooth.profile.bas.client.enabled?=true
+bluetooth.profile.ccp.server.enabled?=true
 bluetooth.profile.csip.set_coordinator.enabled?=true
 bluetooth.profile.gatt.enabled?=true
 bluetooth.profile.hap.client.enabled?=true
@@ -130,7 +154,6 @@ bluetooth.profile.pan.nap.enabled?=true
 bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
-bluetooth.profile.ccp.server.enabled?=true
 bluetooth.profile.vcp.controller.enabled?=true
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
@@ -149,6 +172,9 @@ ro.soc.model=SM8250
 # Crypto
 ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
+
+# DRM
+drm.service.enabled=true
 
 # Display
 persist.sys.sf.color_mode=9
@@ -177,20 +203,17 @@ vendor.display.qdcm.mode_combine=1
 vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 
-# DRM
-drm.service.enabled=true
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Fingerprint
 persist.vendor.qfp=false
 
-# FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
+# GPS
+persist.backup.ntpServer=0.pool.ntp.org
 
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
-
-# GPS
-persist.backup.ntpServer=0.pool.ntp.org
 
 # Graphics
 debug.egl.hw=0
@@ -210,8 +233,8 @@ ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
 
 # HVDCP
-persist.vendor.pps.disallowed=1
 persist.vendor.hvdcp_opti.disallowed=1
+persist.vendor.pps.disallowed=1
 
 # Keystore
 ro.hardware.keystore_desede=true
@@ -234,6 +257,41 @@ ro.vendor.extension_library=libqti-perfd-client.so
 
 # Qualcomm System Daemon
 persist.vendor.qcomsysd.enabled=1
+
+# Radio
+persist.radio.NO_STAPA=1
+persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.dynamic_sar=false
+persist.radio.multisim.config=dsds
+persist.rcs.supported=0
+persist.vendor.data.mode=concurrent
+persist.vendor.radio.apm_sim_not_pwdn=1
+persist.vendor.radio.atfwd.start=true
+persist.vendor.radio.cdma_cap=true
+persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.data_con_rprt=1
+persist.vendor.radio.data_ltd_sys_ind=1
+persist.vendor.radio.dynamic_sar=1
+persist.vendor.radio.enable_temp_dds=true
+persist.vendor.radio.enableadvancedscan=true
+persist.vendor.radio.force_ltd_sys_ind=1
+persist.vendor.radio.force_on_dc=true
+persist.vendor.radio.manual_nw_rej_ct=1
+persist.vendor.radio.mbn_cdma=/vendor/firmware_mnt/image/modem_pr/mcfg/configs/mcfg_sw/oem_sw_j11.txt
+persist.vendor.radio.procedure_bytes=SKIP
+persist.vendor.radio.rat_on=combine
+persist.vendor.radio.redir_party_num=1
+persist.vendor.radio.sib16_support=1
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+ro.com.android.dataroaming=true
+ro.telephony.default_network=22,22
+
+# Refresh Rate
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.set_idle_timer_ms=80
+ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
+vendor.display.idle_time=1100
 
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
