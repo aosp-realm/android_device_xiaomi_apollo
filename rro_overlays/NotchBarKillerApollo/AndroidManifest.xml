@@ -15,7 +15,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.android.internal.display.cutout.emulation.NotchBarKiller"
+        package="com.android.internal.display.cutout.emulation.NotchBarKillerApollo"
         android:versionCode="1"
         android:versionName="1.0">
     <overlay android:targetPackage="android"
