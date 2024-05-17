@@ -518,7 +518,7 @@ vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # Consumer IR
-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.kona.so
+vendor/lib64/hw/consumerir.default.so
 
 # DPM
 system/framework/tcmclient.jar
