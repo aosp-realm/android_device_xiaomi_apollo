@@ -458,7 +458,7 @@ vendor/etc/camera/almalence_sr_params_wide.config
 vendor/etc/camera/almalence_sr_params_wide_64M.config
 vendor/etc/camera/beauty_ui9_intelligent_params.config
 vendor/etc/camera/bokehParams.json
-vendor/etc/camera/camxoverridesettings.txt
+vendor/etc/camera/camxoverridesettings.txt|90413cd103da5d292511c2f386a33ab68b06bfec
 vendor/etc/camera/com.xiaomi.dcal.wu.fake
 vendor/etc/camera/com.xiaomi.dcal.wu.golden
 vendor/etc/camera/com.xiaomi.dcal.wu.golden2
@@ -757,7 +757,6 @@ system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
-system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 -system_ext/priv-app/ims/ims.apk|186fef3f847a2650ee07f06984b67d7cc6f4182f
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
@@ -863,12 +862,11 @@ vendor/lib64/libmmosal.so
 odm/etc/media_profiles_V1_0.xml
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_c2.xml
-vendor/etc/media_codecs_kona.xml
+vendor/etc/media_codecs_kona.xml|7ff767fb70b7c849d25ee8111eef24016a10ea68
 vendor/etc/media_codecs_kona_vendor.xml
 vendor/etc/media_codecs_performance_c2.xml
 vendor/etc/media_codecs_performance_kona.xml
 vendor/etc/media_codecs_performance_kona_vendor.xml
-vendor/etc/media_codecs_system_default.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_kona.xml
 vendor/etc/media_profiles_vendor.xml
@@ -890,7 +888,7 @@ vendor/lib64/libmlipay@1.1.so
 
 # NFC
 vendor/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
-vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-nci.conf|e08e512dbe53974e6a081cc7da6670c016a47da0
 vendor/etc/libnfc-nxp.conf
 vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
 
@@ -1075,7 +1073,7 @@ vendor/lib64/libqcrilFramework.so
 vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
-vendor/lib64/libril-qc-hal-qmi.so
+vendor/lib64/libril-qc-hal-qmi.so|8a174d29c2f5f5b8879cd5ee2c5976371dfed6ff
 vendor/lib64/libril-qc-logger.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
