@@ -42,4 +42,7 @@
 
     <!-- Whether to show the Preference for Adaptive connectivity -->
     <bool name="config_show_adaptive_connectivity">false</bool>
+
+    <!-- Whether to show double tap ambient settings -->
+    <bool name="config_supports_double_tap_ambient" translatable="false">true</bool>
 </resources>
