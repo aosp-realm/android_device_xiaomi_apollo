@@ -43,8 +43,8 @@ static const variant_info_t apollo_info = {
     .hwc_value = "",
     .sku_value = "",
 
-    .mod_device = "apollo_global",
-    .name = "apollo_global",
+    .mod_device = "apollo",
+    .name = "apollo",
     .brand = "Redmi",
     .device = "apollo",
     .marketname = "Redmi K30S Ultra",
