@@ -617,7 +617,7 @@ vendor/lib64/vendor.display.color@1.4.so
 vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
-# Embedded Secure Element power manager from munch-user 13 RKQ1.211001.001 V14.0.5.0.TLMMIXM release-keys
+# Embedded Secure Element power manager from munch-user 13 RKQ1.211001.001 V14.0.6.0.TLMMIXM release-keys
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service|0427ec8683d9737faa00d3fcb9e19b660a26c298
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc|3c024c7135ec3dd8658624509ee61396a74f1ede
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|5560bfccdc7ea51ed6f3ae032573122ef113c619
@@ -760,65 +760,63 @@ vendor/lib64/hw/vulkan.adreno.so|0388f3fd852c1fb1d90230c48b6abe3058897be8
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-# IMS
-system_ext/lib64/lib-imsvideocodec.so
-system_ext/lib64/lib-imsvt.so
-system_ext/lib64/lib-imsvtextutils.so
-system_ext/lib64/lib-imsvtutils.so
-system_ext/lib64/libimscamera_jni.so
-system_ext/lib64/libimsmedia_jni.so
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
--system_ext/priv-app/ims/ims.apk|186fef3f847a2650ee07f06984b67d7cc6f4182f
-vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon
-vendor/bin/imsqmidaemon
-vendor/bin/imsrcsd
-vendor/etc/init/ims_rtp_daemon.rc
-vendor/etc/init/imsdatadaemon.rc
-vendor/etc/init/imsqmidaemon.rc
-vendor/etc/init/imsrcsd.rc
-vendor/etc/seccomp_policy/imsrtp.policy
-vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
-vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
-vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so
-vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so
-vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
-vendor/lib64/com.qualcomm.qti.uceservice@2.1.so
-vendor/lib64/com.qualcomm.qti.uceservice@2.2.so
-vendor/lib64/lib-imscmservice.so
-vendor/lib64/lib-imsdpl.so
-vendor/lib64/lib-imsqimf.so
-vendor/lib64/lib-imsrcs-v2.so
-vendor/lib64/lib-imsrcsbaseimpl.so
-vendor/lib64/lib-imsvtcore.so
-vendor/lib64/lib-imsxml.so
-vendor/lib64/lib-rcsconfig.so
-vendor/lib64/lib-rtpcommon.so
-vendor/lib64/lib-rtpcore.so
-vendor/lib64/lib-rtpsl.so
-vendor/lib64/lib-siputility.so
-vendor/lib64/lib-uceservice.so
-vendor/lib64/librcc.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so
-vendor/lib64/vendor.qti.ims.callcapability@1.0.so
-vendor/lib64/vendor.qti.ims.callinfo@1.0.so
-vendor/lib64/vendor.qti.ims.factory@1.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
-vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
-
-# IMS from munch-user 13 RKQ1.211001.001 V14.0.5.0.TLMMIXM release-keys
+# IMS from munch-user 13 RKQ1.211001.001 V14.0.6.0.TLMMIXM release-keys
+system_ext/lib64/lib-imsvideocodec.so|3f927b23e04506f96921755e36b7a298ecdb4c98
+system_ext/lib64/lib-imsvt.so|2dd3277d4a8e4b4c0afb5dd129f650b56e595179
+system_ext/lib64/lib-imsvtextutils.so|1dfb5640cd23a92e7ca55a84118b2966653aebc7
+system_ext/lib64/lib-imsvtutils.so|501c2081942844498c466b49a09b79615e5ba877
+system_ext/lib64/libimscamera_jni.so|f6b7647cfe080baeed006c932b495ff94b5685a7
+system_ext/lib64/libimsmedia_jni.so|b47ffbfc2f22576dac78c5669cd0fa921025bb3a
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|ace5e02b6cd79b43a07d84e2d18d6818821a3c48
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|e64aa8a21a8db69d2e2ea14929bb20ced99c119d
+-system_ext/priv-app/ims/ims.apk|6ddec8df47b66c1903de79c7cfb790d2381bb987
+vendor/bin/ims_rtp_daemon|5bce1851feca157c9847e09b72057b07fca286d9
+vendor/bin/imsdatadaemon|4f083394d6d149485cbcd16d5818bad84ae659a0
+vendor/bin/imsqmidaemon|4226e2fac59f293a169e0b258c23e194dce44ea4
+vendor/bin/imsrcsd|41b091b9a7913221a8574572b2306dbfc468298e
+vendor/etc/init/ims_rtp_daemon.rc|06510e936890f51aeb76f2cf3ed5dbe45e67ac20
+vendor/etc/init/imsdatadaemon.rc|29face37c174aebcd1358f7d7ad0bd4baf83063b
+vendor/etc/init/imsqmidaemon.rc|dda16d842b7c65296e97bc9921b723a43b152ba3
+vendor/etc/init/imsrcsd.rc|443f3570874a59c73ed5d1fa6b393f8733c7fc49
+vendor/etc/seccomp_policy/imsrtp.policy|fb5f1f63dbc3a002ac0f203cce3b8d3434752fa2
+vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so|0739c782968ad0298d6ade86b11a7349d944be62
+vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so|e7bc98b61ee5d274f7e66561de39ca0cea27667b
+vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so|2d5d563b00cdf6b3a277d37f1d46059225d951ab
+vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so|4635d0624e36a2b0ec170e8c7a22687af4882de9
+vendor/lib64/com.qualcomm.qti.uceservice@2.0.so|6cbf36d3bf32415054f5e60a9bb4aefc15ed6b29
+vendor/lib64/com.qualcomm.qti.uceservice@2.1.so|9c7fcd11e56b1f357c3d6dd4794c494ecec88c76
+vendor/lib64/com.qualcomm.qti.uceservice@2.2.so|d149ae00af854babc812206f0c27a5949c6db597
+vendor/lib64/lib-imscmservice.so|14c601a9ccaf91826400fc4aac90b70106074c8e
+vendor/lib64/lib-imsdpl.so|5ea1bc110c12ca187738c3b57c0cc21a9b6f4a87
+vendor/lib64/lib-imsqimf.so|79d7f16db7856800c090142493a07d273ecd6bd5
+vendor/lib64/lib-imsrcs-v2.so|24e287ec7938c82e18fc80698bebf00213773e0a
+vendor/lib64/lib-imsrcsbaseimpl.so|0416f706322f230dea4deaaccd03f688f9a6a41d
+vendor/lib64/lib-imsvtcore.so|d56d20c576fe352b8258b6c2caf9e3586e6fd322
+vendor/lib64/lib-imsxml.so|bf8ec37309f7cf578029b8bfe2b65ccbb9f5fcbe
+vendor/lib64/lib-rcsconfig.so|4b80926100cbb12538d36d182d2799300a91d7c1
+vendor/lib64/lib-rtpcommon.so|3fa25ec9c2a6f99e62a6c2f847e31e9577345e69
+vendor/lib64/lib-rtpcore.so|042050ed94d8fe67f4514c0d66b16c94125488c4
+vendor/lib64/lib-rtpsl.so|a027d70e3365ccda3fed841e0dd8ebba06ba514e
+vendor/lib64/lib-siputility.so|e83f17dc7fae85573034cdb43dde4d69956a2b51
+vendor/lib64/lib-uceservice.so|0968c76a7996a18b88ebc4720eb63dbdbf2f4784
+vendor/lib64/librcc.so|7b45e6cd7436fbb03e2c19e62a3db138125db093
+vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so|8d04ed87d9e5dc5aab96b92070427d42fc17bf3a
+vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so|bc614803a27a234f1fee437ee490857a09def6c0
+vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so|62236da8c2fdba88bcd38f0d49de5f015bb6f267
+vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so|2f8f30f72b080f9967d4c1283a7aa060380f28d6
+vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so|dd56116701659735751e44e5760fc51e5ff2fe19
+vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so|272ad051e191a3a6d410ac6152728dccfe063f87
+vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so|b267564acc6d4ac79939793d4498ef8380a21dfc
+vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so|d8106df7a9c889c84945a959ec49b5680e0fe82f
+vendor/lib64/vendor.qti.ims.callcapability@1.0.so|07df07fc51950ccde380b576ef005d5d2a0c282e
+vendor/lib64/vendor.qti.ims.callinfo@1.0.so|612cddd0bd3ea68fe9ebb2bc02208410366f6c46
+vendor/lib64/vendor.qti.ims.factory@1.0.so|98726ee70915c7ac09f1bf9001b5163ad579d159
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|04fdb21cb29f3281146fba5e560893ba184687ef
+vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so|a9ee88a7a5aa10f1cf7836c768727120fdb519ee
+vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so|84df6f50ab4783903aaa5cfe8071ee4a5ec459f7
+vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|b318f7135c79980654e9a564e6b464cd62d5ccbd
+vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|13af0229d2f43d9653d48b4400c7db999d9035e5
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so|6d4b854e7ba91ef98398568c365a131cf4c01c93
 
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
@@ -883,7 +881,7 @@ vendor/etc/media_profiles_kona.xml
 vendor/etc/media_profiles_vendor.xml
 vendor/etc/system_properties.xml
 
-# Media configs from munch-user 13 RKQ1.211001.001 V14.0.5.0.TLMMIXM release-keys
+# Media configs from munch-user 13 RKQ1.211001.001 V14.0.6.0.TLMMIXM release-keys
 vendor/etc/media_codecs_system_default.xml|c002cf84da176292cf52e64099584704b37b2fd0|3eff72fbd14f41bdc998182c34e1ca5346c36dbe
 
 # Mink-Lowi Interface daemon
@@ -1132,7 +1130,7 @@ vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 vendor/etc/seccomp_policy/mediacodec.policy
 
-# Secure element from munch-user 13 RKQ1.211001.001 V14.0.5.0.TLMMIXM release-keys
+# Secure element from munch-user 13 RKQ1.211001.001 V14.0.6.0.TLMMIXM release-keys
 vendor/bin/hw/vendor.qti.secure_element@1.2-service|72520c6b891d7f7578ba86163879584b4de0da6c
 vendor/etc/init/vendor.qti.secure_element@1.2-service.rc|cb8e44a67709a5d9c2f0544058d79eb9f6faad7b
 vendor/lib64/android.hardware.secure_element@1.0-impl.so|3226de439fb512f738f1344c685c68180edf427e
