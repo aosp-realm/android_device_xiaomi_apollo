@@ -199,15 +199,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "UfsClkGateEnable",
-      "Path": "/sys/devices/platform/soc/1d84000.ufshc/clkgate_enable",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -312,12 +303,6 @@
       "Value": "2597"
     },
     {
-      "PowerHint": "INTERACTION",
-      "Node": "UfsClkGateEnable",
-      "Duration": 200,
-      "Value": "0"
-    },
-    {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 3000,
@@ -412,12 +397,6 @@
       "Node": "L3BigPlusClusterMinFreq",
       "Duration": 3000,
       "Value": "1612800000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UfsClkGateEnable",
-      "Duration": 3000,
-      "Value": "0"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
