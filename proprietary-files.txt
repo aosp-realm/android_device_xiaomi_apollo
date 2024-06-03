@@ -15,6 +15,11 @@ vendor/lib/libacdbloader.so
 # ADSP
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-service.rc
+vendor/lib/libadsprpc.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+
+# ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_cirrus_sp.so
 vendor/lib/rfsa/adsp/hrtf5c.bin
 vendor/lib/rfsa/adsp/libMIAIHDR_skel.so
@@ -47,9 +52,6 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/misound_karaoke_res.bin
 vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res.bin
-vendor/lib/libadsprpc.so
-vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libadsprpc.so
 
 # ADSP modules (aptX)
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
@@ -328,7 +330,7 @@ vendor/lib64/libvideofilter_only.so
 vendor/lib64/libvidhance.so
 vendor/lib64/libxmi_hdr_checker.so
 vendor/lib64/libxmi_high_dynamic_range.so
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|f0ee934ce0ceedaf3c429be7c644311e8343a6a8|040754908683f59ee1b5b7f962f659fbed3a515a
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|8629ddc55445116852140a88c6d272683ac6bd49
 
 # Camera (camerax)
 vendor/lib/libcamxexternalformatutils.so
@@ -876,7 +878,7 @@ vendor/lib64/libmmosal.so
 odm/etc/media_profiles_V1_0.xml
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_c2.xml
-vendor/etc/media_codecs_kona.xml|7ff767fb70b7c849d25ee8111eef24016a10ea68
+vendor/etc/media_codecs_kona.xml
 vendor/etc/media_codecs_kona_vendor.xml
 vendor/etc/media_codecs_performance_c2.xml
 vendor/etc/media_codecs_performance_kona.xml
@@ -885,9 +887,6 @@ vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_kona.xml
 vendor/etc/media_profiles_vendor.xml
 vendor/etc/system_properties.xml
-
-# Media configs from munch-user 13 RKQ1.211001.001 V14.0.6.0.TLMMIXM release-keys
-vendor/etc/media_codecs_system_default.xml|c002cf84da176292cf52e64099584704b37b2fd0|3eff72fbd14f41bdc998182c34e1ca5346c36dbe
 
 # Mink-Lowi Interface daemon
 vendor/bin/mlid
@@ -1250,6 +1249,8 @@ vendor/bin/ssr_setup
 # Thermal
 vendor/bin/mi_thermald
 vendor/etc/init/init.mi_thermald.rc
+
+# Thermal configs
 vendor/etc/thermal-camera.conf
 vendor/etc/thermal-chg-only.conf
 vendor/etc/thermal-class0.conf
