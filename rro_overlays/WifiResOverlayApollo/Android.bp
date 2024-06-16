@@ -1,6 +1,6 @@
 runtime_resource_overlay {
-    name: "WifiOverlayApollo",
-    theme: "WifiOverlayApollo",
+    name: "WifiResOverlayApollo",
+    theme: "WifiResOverlayApollo",
     sdk_version: "current",
     vendor: true
 }
