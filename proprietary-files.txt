@@ -330,7 +330,7 @@ vendor/lib64/libvideofilter_only.so
 vendor/lib64/libvidhance.so
 vendor/lib64/libxmi_hdr_checker.so
 vendor/lib64/libxmi_high_dynamic_range.so
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|8629ddc55445116852140a88c6d272683ac6bd49
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Camera (camerax)
 vendor/lib/libcamxexternalformatutils.so
@@ -370,7 +370,7 @@ vendor/lib64/camera/components/com.mi.node.rearvideo.so
 vendor/lib64/camera/components/com.mi.node.skinbeautifier.so
 vendor/lib64/camera/components/com.mi.node.superlowlightraw.so
 vendor/lib64/camera/components/com.mi.node.videobokeh.so
-vendor/lib64/camera/components/com.mi.node.watermark.so|3d4d5f9068c9b61d619ea7fa87f62e3ed37ed070
+vendor/lib64/camera/components/com.mi.node.watermark.so
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so
 vendor/lib64/camera/components/com.qti.eisv2.so
 vendor/lib64/camera/components/com.qti.eisv3.so
@@ -465,7 +465,7 @@ vendor/etc/camera/almalence_sr_params_wide.config
 vendor/etc/camera/almalence_sr_params_wide_64M.config
 vendor/etc/camera/beauty_ui9_intelligent_params.config
 vendor/etc/camera/bokehParams.json
-vendor/etc/camera/camxoverridesettings.txt|90413cd103da5d292511c2f386a33ab68b06bfec
+vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/com.xiaomi.dcal.wu.fake
 vendor/etc/camera/com.xiaomi.dcal.wu.golden
 vendor/etc/camera/com.xiaomi.dcal.wu.golden2
@@ -892,7 +892,7 @@ vendor/lib64/libmlipay@1.1.so
 
 # NFC
 vendor/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
-vendor/etc/libnfc-nci.conf|e08e512dbe53974e6a081cc7da6670c016a47da0
+vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
 
@@ -1077,7 +1077,7 @@ vendor/lib64/libqcrilFramework.so
 vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
-vendor/lib64/libril-qc-hal-qmi.so|8a174d29c2f5f5b8879cd5ee2c5976371dfed6ff
+vendor/lib64/libril-qc-hal-qmi.so
 vendor/lib64/libril-qc-logger.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
