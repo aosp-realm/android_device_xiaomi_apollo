@@ -77,6 +77,7 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
+TARGET_KERNEL_CLANG_VERSION := r487747c
 TARGET_KERNEL_CONFIG := \
     apollo_defconfig \
     vendor/debugfs.config
