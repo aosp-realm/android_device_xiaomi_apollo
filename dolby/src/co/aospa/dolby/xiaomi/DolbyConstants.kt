@@ -26,7 +26,7 @@ class DolbyConstants {
     }
 
     companion object {
-        const val TAG = "XiaomiDolby"
+        const val TAG = "XiaomiDolbyApollo"
         const val PREF_ENABLE = "dolby_enable"
         const val PREF_PROFILE = "dolby_profile"
         const val PREF_PRESET = "dolby_preset"

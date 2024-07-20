@@ -6,7 +6,7 @@
 //
 
 android_app {
-    name: "XiaomiDolby",
+    name: "XiaomiDolbyApollo",
 
     srcs: ["src/**/*.kt"],
     resource_dirs: ["res"],
