@@ -6,7 +6,3 @@
   *;
 }
 
--keep class org.lineageos.settings.refreshrate.* {
-  *;
-}
-
