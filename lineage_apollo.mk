@@ -12,6 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_USES_MINI_GAPPS := true
+BUILD_BCR := false
 
 # Inherit from apollo device
 $(call inherit-product, device/xiaomi/apollo/device.mk)
