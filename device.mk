@@ -250,7 +250,13 @@ PRODUCT_PACKAGES += \
 
 # Input
 PRODUCT_PACKAGES += \
-    kona-mtp-snd-card_Button_Jack.kl
+    kona-mtp-snd-card_Button_Jack.kl \
+    uinput-fpc.kl \
+    uinput-goodix.kl
+
+PRODUCT_PACKAGES += \
+    uinput-fpc.idc \
+    uinput-goodix.idc
 
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
