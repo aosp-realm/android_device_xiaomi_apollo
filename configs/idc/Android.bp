@@ -4,8 +4,3 @@ prebuilt_usr_idc {
     vendor: true,
 }
 
-prebuilt_usr_idc {
-    name: "uinput-goodix.idc",
-    src: "uinput-goodix.idc",
-    vendor: true,
-}

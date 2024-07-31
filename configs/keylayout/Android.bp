@@ -16,8 +16,3 @@ prebuilt_usr_keylayout {
     vendor: true,
 }
 
-prebuilt_usr_keylayout {
-    name: "uinput-goodix.kl",
-    src: "uinput-goodix.kl",
-    vendor: true,
-}
