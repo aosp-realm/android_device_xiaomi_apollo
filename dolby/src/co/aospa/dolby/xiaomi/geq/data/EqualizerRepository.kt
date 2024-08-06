@@ -56,15 +56,11 @@ class EqualizerRepository(
         val presets = context.resources.getStringArray(
             R.array.dolby_preset_values
         )
-        List(names.size + 1) { index ->
-            if (index == 0) {
-                defaultPreset
-            } else {
-                Preset(
-                    name = names[index - 1],
-                    bandGains = deserializeGains(presets[index - 1]),
-                )
-            }
+        List(names.size) { index ->
+            Preset(
+                name = names[index],
+                bandGains = deserializeGains(presets[index]),
+            )
         }
     }
 
