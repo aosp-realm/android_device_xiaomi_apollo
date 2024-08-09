@@ -811,66 +811,6 @@ KernelVersionS=${KernelVersionStr:2:2}
 KernelVersionA=${KernelVersionStr:0:1}
 KernelVersionB=${KernelVersionS%.*}
 
-function configure_zram_parameters() {
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
-
-    low_ram=`getprop ro.config.low_ram`
-
-    # Zram disk - 75% for Go devices.
-    # For 512MB Go device, size = 384MB, set same for Non-Go.
-    # For 1GB Go device, size = 768MB, set same for Non-Go.
-    # For 2GB Go device, size = 1536MB, set same for Non-Go.
-    # For >2GB Non-Go devices, size = 50% of RAM size. Limit the size to 4GB.
-    # And enable lz4 zram compression for Go targets.
-
-    let RamSizeGB="( $MemTotal / 1048576 ) + 1"
-    diskSizeUnit=M
-    if [ $RamSizeGB -le 2 ]; then
-        let zRamSizeMB="( $RamSizeGB * 1024 ) * 3 / 4"
-    else
-        let zRamSizeMB="( $RamSizeGB * 1024 ) / 2"
-    fi
-
-    # use MB avoid 32 bit overflow
-    if [ $zRamSizeMB -gt 4096 ]; then
-        let zRamSizeMB=4096
-    fi
-
-    if [ "$low_ram" == "true" ]; then
-        echo lz4 > /sys/block/zram0/comp_algorithm
-    fi
-
-    if [ -f /sys/block/zram0/disksize ]; then
-        disksize=`cat /sys/block/zram0/disksize`
-        if [ $disksize -eq 0 ]; then
-            if [ -f /sys/block/zram0/use_dedup ]; then
-                echo 1 > /sys/block/zram0/use_dedup
-            fi
-            if [ $MemTotal -le 524288 ]; then
-                echo 402653184 > /sys/block/zram0/disksize
-            elif [ $MemTotal -le 1048576 ]; then
-                echo 805306368 > /sys/block/zram0/disksize
-            else
-                zramDiskSize=$zRamSizeMB$diskSizeUnit
-                echo $zramDiskSize > /sys/block/zram0/disksize
-            fi
-
-            # ZRAM may use more memory than it saves if SLAB_STORE_USER
-            # debug option is enabled.
-            if [ -e /sys/kernel/slab/zs_handle ]; then
-                echo 0 > /sys/kernel/slab/zs_handle/store_user
-            fi
-            if [ -e /sys/kernel/slab/zspage ]; then
-                echo 0 > /sys/kernel/slab/zspage/store_user
-            fi
-
-            mkswap /dev/block/zram0
-            swapon /dev/block/zram0 -p 32758
-        fi
-    fi
-}
-
 function configure_read_ahead_kb_values() {
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
@@ -951,15 +891,14 @@ function configure_memory_parameters() {
     # Set allocstall_threshold to 0 for all targets.
     #
 
-    ProductName=`getprop ro.product.name`
+    ProductName=`getprop ro.board.platform`
     low_ram=`getprop ro.config.low_ram`
 
     if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ] || [ "$ProductName" == "alioth" ]; then
+
         # Enable ZRAM
-        configure_zram_parameters
         configure_read_ahead_kb_values
-        echo 0 > /proc/sys/vm/page-cluster
-        echo 100 > /proc/sys/vm/swappiness
+      	echo 100 > /proc/sys/vm/swappiness
 
         #add memory limit to camera cgroup
         MemTotalStr=`cat /proc/meminfo | grep MemTotal`
@@ -6226,35 +6165,3 @@ case "$target" in
         echo 5120 > /proc/sys/vm/min_free_kbytes
      ;;
 esac
-# Let kernel know our image version/variant/crm_version
-if [ -f /sys/devices/soc0/select_image ]; then
-    image_version="10:"
-    image_version+=`getprop ro.build.id`
-    image_version+=":"
-    image_version+=`getprop ro.build.version.incremental`
-    image_variant=`getprop ro.product.name`
-    image_variant+="-"
-    image_variant+=`getprop ro.build.type`
-    oem_version=`getprop ro.build.version.codename`
-    echo 10 > /sys/devices/soc0/select_image
-    echo $image_version > /sys/devices/soc0/image_version
-    echo $image_variant > /sys/devices/soc0/image_variant
-    echo $oem_version > /sys/devices/soc0/image_crm_version
-fi
-
-# Change console log level as per console config property
-console_config=`getprop persist.vendor.console.silent.config`
-case "$console_config" in
-    "1")
-        echo "Enable console config to $console_config"
-        echo 0 > /proc/sys/kernel/printk
-        ;;
-    *)
-        echo "Enable console config to $console_config"
-        ;;
-esac
-
-# Parse misc partition path and set property
-misc_link=$(ls -l /dev/block/bootdevice/by-name/misc)
-real_path=${misc_link##*>}
-setprop persist.vendor.mmi.misc_dev_path $real_path

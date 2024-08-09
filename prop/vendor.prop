@@ -177,7 +177,6 @@ persist.sys.sf.color_mode=9
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=2
 ro.surface_flinger.enable_frame_rate_override=false
-ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
@@ -199,6 +198,9 @@ vendor.display.qdcm.disable_factory_mode=1
 vendor.display.qdcm.mode_combine=1
 vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
+
+# Dolby
+persist.vendor.audio_fx.current=dolby
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
@@ -269,6 +271,7 @@ persist.vendor.radio.cdma_cap=true
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.data_ltd_sys_ind=1
+persist.vendor.radio.add_power_save=1
 persist.vendor.radio.dynamic_sar=1
 persist.vendor.radio.enable_temp_dds=true
 persist.vendor.radio.enableadvancedscan=true
@@ -280,7 +283,7 @@ persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
 ro.com.android.dataroaming=true
-ro.telephony.default_network=22,22
+ro.telephony.default_network=33,33
 
 # Refresh Rate
 ro.surface_flinger.set_display_power_timer_ms=1000
