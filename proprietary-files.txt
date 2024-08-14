@@ -865,22 +865,24 @@ system_ext/lib64/libmmparser_lite.so
 vendor/lib/libmmosal.so
 vendor/lib64/libmmosal.so
 
-# Media - (Dolby)
--vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|a5b407c13dc7348ce9d66ff71b22063fde803110
+# Media (Dolby) - from sweet global-user-13-TKQ1.221114.001-V816.0.6.0.THGMIXM-release-keys
+-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|13457b78a8ec28ccb814700d21774ed7f3c22dd2
 -vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 -vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml|c8095f649de19b80271fb429b4b6b439297a0678
+vendor/lib/libdapparamstorage.so|adad562803bd15c3793d14bc2c9bb1ef36e70854
+vendor/lib/libdeccfg.so|15ee74974b96595bbd573e1982f4f0841f989740
+vendor/lib/libstagefright_soft_ac4dec.so|601b21fd9d14b4c29adec3af5fb152a0d13d4a29
+vendor/lib/libstagefright_soft_ddpdec.so|f4fe3ac413cf92e9243557fefe6afaa8693d6fd2
+vendor/lib/vendor.dolby.hardware.dms@2.0.so|a3e97168f1cfbafc4c6492bc26a45b039e1e61f4
+vendor/lib64/libdapparamstorage.so|67ae45857561cb0450b872de1e7896ad7346481c
+vendor/lib64/libdlbdsservice.so|c0691c19eff9698787e930d20cd37be0fc359455
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|5e742e5691c874877ca78dc7664bb7c4a97fe9af
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so|5320bc52055155c16a554ed65f9ccd48d9165232
+
+# Media (Dolby SoundFX) - from https://github.com/reiryuki/Dolby-Atmos-Moto-G52-Magisk-Module.git
 vendor/lib/soundfx/libswdap.so|810d0e266e4a77f06cba72fe8bdde2e1ede4f9f9
 vendor/lib/soundfx/libswgamedap.so|c7d35eb932ecffb384ec62628404df3406b63919
 vendor/lib/soundfx/libswvqe.so|3009202dcdd5b8fadb9c43a8cf5f0fe1c28311a6
-vendor/lib/libdapparamstorage.so|da1ee55c70a51c820f796ad1663e28b465304e2e
-vendor/lib/libdeccfg.so|22594003b9f28f4c2aeeda484bb7ab8fbf0f67ea
-vendor/lib/libstagefright_soft_ac4dec.so|564db26f99adc4b8a71473fc4dd9e95a5f2e3c50
-vendor/lib/libstagefright_soft_ddpdec.so|29061ed62252311630438086ab854a2751a8f381
-vendor/lib/vendor.dolby.hardware.dms@2.0.so|2bf537bbf5c413527e5c648b8e63b95f904f7532
-vendor/lib64/libdapparamstorage.so|573c229a12b95151922c669301b34851444a8004
-vendor/lib64/libdlbdsservice.so|518f4a7fa3dd4bb9d0ced70f81bb7711c66f5e38
-vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|e0bd781d13463f28dcc2bd05b37dfaebadecc95b
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so|2020b5fd9abac65520224069bbe75d5e76d3f158
 
 # Mink-Lowi Interface daemon
 vendor/bin/mlid
