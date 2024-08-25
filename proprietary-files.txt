@@ -432,7 +432,7 @@ vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib/libcdsprpc.so
 vendor/lib/libfastcrc.so
 vendor/lib/libfastcvdsp_stub.so
--vendor/lib/libfastcvopt.so
+vendor/lib/libfastcvopt.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
 vendor/lib/libsysmon_cdsp_skel.so
@@ -442,7 +442,7 @@ vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libcdsprpc_system.so
 vendor/lib64/libfastcvdsp_stub.so
--vendor/lib64/libfastcvopt.so
+vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
@@ -875,7 +875,7 @@ vendor/lib/soundfx/libswgamedap.so|c7d35eb932ecffb384ec62628404df3406b63919
 vendor/lib/soundfx/libswvqe.so|3009202dcdd5b8fadb9c43a8cf5f0fe1c28311a6
 
 # Media (Dolby) - from sweet global-user-13-TKQ1.221114.001-V816.0.6.0.THGMIXM-release-keys
--vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|13457b78a8ec28ccb814700d21774ed7f3c22dd2
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|13457b78a8ec28ccb814700d21774ed7f3c22dd2
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml|c8095f649de19b80271fb429b4b6b439297a0678
 vendor/lib/libdapparamstorage.so|adad562803bd15c3793d14bc2c9bb1ef36e70854
@@ -1221,8 +1221,8 @@ vendor/etc/thermald-devices.conf
 # Thermal engine
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
 
 # Time services
 vendor/app/TimeService/TimeService.apk
