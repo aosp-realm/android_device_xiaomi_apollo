@@ -28,7 +28,7 @@ static const variant_info_t apollopro_info = {
 
     .mod_device = "apollo_global",
     .brand = "Xiaomi",
-    .name = "apollo_global",
+    .name = "apollopro_global",
     .device = "apollo",
     .marketname = "Mi 10T Pro",
     .model = "M2007J3SG",
