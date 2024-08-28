@@ -867,8 +867,8 @@ vendor/lib64/libmmosal.so
 
 # Media (Dolby) - from sweet global-user-13-TKQ1.221114.001-V816.0.6.0.THGMIXM-release-keys
 -vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|13457b78a8ec28ccb814700d21774ed7f3c22dd2
--vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 -vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml|c8095f649de19b80271fb429b4b6b439297a0678
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 vendor/lib/libdapparamstorage.so|adad562803bd15c3793d14bc2c9bb1ef36e70854
 vendor/lib/libdeccfg.so|15ee74974b96595bbd573e1982f4f0841f989740
 vendor/lib/libstagefright_soft_ac4dec.so|601b21fd9d14b4c29adec3af5fb152a0d13d4a29
