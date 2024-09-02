@@ -575,7 +575,7 @@ system_ext/lib64/libdpmtcm.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libdpmqmihal.so
 
 # DRM (OEM Crypto API)
@@ -818,7 +818,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # IMS - Patched ims.apk from munch-user 14 RKQ1.211001.001 V816.0.2.0.ULMMIXM release-keys
 system_ext/priv-app/ims/ims.apk|15ff2ffe456ec58bd10ff9f947899f225df42f09
@@ -867,7 +867,7 @@ vendor/lib/libsmwrapper.so
 # Media
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
-vendor/lib/libmmosal.so
+vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor
 
 # Media (Dolby SoundFX) - from https://github.com/reiryuki/Dolby-Atmos-Moto-G52-Magisk-Module.git
 vendor/lib/soundfx/libswdap.so|810d0e266e4a77f06cba72fe8bdde2e1ede4f9f9
@@ -1330,5 +1330,5 @@ vendor/lib/libwfduibcsinkinterface_proprietary.so
 vendor/lib/libwfduibcsrc_proprietary.so
 vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
-vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
+vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
