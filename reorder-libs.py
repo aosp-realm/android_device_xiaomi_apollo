@@ -48,26 +48,6 @@ def strcoll_extract_utils(string1: str, string2: str) -> int:
     # Compare normally
     return strcoll(string1, string2)
 
-def merge_and_sort_sections(sections):
-    merged_sections = {}
-    for section in sections:
-        lines = section.strip().split('\n')
-        if not lines:  # Skip empty sections
-            continue
-        headline = lines.pop(0)  # Remove and store the first line as the headline
-        if headline not in merged_sections:
-            merged_sections[headline] = []
-        merged_sections[headline].extend(lines)
-    
-    sorted_sections = []
-    for headline in sorted(merged_sections.keys()):
-        sorted_sections.append(headline)
-        if merged_sections[headline]:  # Check if the list is not empty
-            sorted_sections.extend(sorted(merged_sections[headline], key=cmp_to_key(strcoll_extract_utils)))  # Sort the remaining lines
-        sorted_sections.append('')
-    
-    return sorted_sections
-
 for file in FILES:
     if not file.is_file():
         print(f"File {str(file)} not found")
@@ -76,7 +56,11 @@ for file in FILES:
     with open(file, 'r') as f:
         sections = f.read().split("\n\n")
 
-    ordered_sections = merge_and_sort_sections(sections)
+    ordered_sections = []
+    for section in sections:
+        section_list = [line.strip() for line in section.splitlines()]
+        section_list.sort(key=cmp_to_key(strcoll_extract_utils))
+        ordered_sections.append("\n".join(section_list))
 
     with open(file, 'w') as f:
-        f.write("\n".join(ordered_sections).strip() + "\n")
+        f.write("\n\n".join(ordered_sections).strip() + "\n")
