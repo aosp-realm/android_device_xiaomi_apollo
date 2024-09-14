@@ -105,9 +105,14 @@ EOF
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
             ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy)
+            [ "$2" = "" ] && return 0
+            echo 'gettid: 1' >> "${2}"
+            ;;
+
         *)
             return 1
-            ;;
+	    ;;
     esac
 
     return 0
