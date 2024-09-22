@@ -14,6 +14,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_USES_MINI_GAPPS := true
 BUILD_BCR := false
 
+ifeq ($(TARGET_USES_MINI_GAPPS),true)
+PRODUCT_PACKAGES += \
+    TurboAdapter
+endif
+
 # Inherit from apollo device
 $(call inherit-product, device/xiaomi/apollo/device.mk)
 
