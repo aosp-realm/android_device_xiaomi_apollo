@@ -19,6 +19,8 @@ PRODUCT_PACKAGES += \
     TurboAdapter
 endif
 
+TARGET_USES_MIUI_CAMERA := true
+
 # Inherit from apollo device
 $(call inherit-product, device/xiaomi/apollo/device.mk)
 
