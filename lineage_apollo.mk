@@ -11,12 +11,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common AOSP stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+ifeq ($(BUILD_RISING),true)
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
+TARGET_ENABLE_BLUR := false
+PRODUCT_NO_CAMERA := false
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RISING_CHIPSET="SM8250-KONA" \
+    RISING_MAINTAINER="dogpoopy"
+endif
+
+ifeq ($(BUILD_EVO),true)
 TARGET_USES_MINI_GAPPS := true
 BUILD_BCR := false
 
 ifeq ($(TARGET_USES_MINI_GAPPS),true)
 PRODUCT_PACKAGES += \
     TurboAdapter
+endif
 endif
 
 # Inherit from apollo device
