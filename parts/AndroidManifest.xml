@@ -42,9 +42,31 @@
         </receiver>
 
         <service
+            android:name=".refreshrate.RefreshService"
+            android:exported="true"
+            android:permission="RefreshService">
+        </service>
+
+        <service
             android:name=".thermal.ThermalService"
             android:exported="true"
             android:permission="ThermalService" />
+
+        <activity
+            android:name=".refreshrate.RefreshActivity"
+            android:label="@string/refresh_title"
+            android:exported="false"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/refresh_summary" />
+        </activity>
 
         <activity
             android:name=".thermal.ThermalActivity"
