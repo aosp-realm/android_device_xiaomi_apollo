@@ -52,6 +52,14 @@ prebuilt_etc {
     name: "fstab.qcom",
     src: "etc/fstab.qcom",
     vendor: true,
+    required: ["fstab.qcom_ramdisk"],
+}
+
+prebuilt_etc {
+    name: "fstab.qcom_ramdisk",
+    src: "etc/fstab.qcom",
+    filename_from_src: true,
+    ramdisk: true,
 }
 
 // Init configuration files
