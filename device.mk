@@ -94,8 +94,19 @@ PRODUCT_PACKAGES += \
     libvolumelistener
 
 # Audio configs
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+PRODUCT_PACKAGES += \
+    audio_effects.xml \
+    audio_io_policy.conf \
+    audio_platform_info_intcodec.xml \
+    audio_policy_configuration.xml \
+    audio_policy_volumes.xml \
+    audio_tuning_mixer.txt \
+    mixer_paths.xml \
+    mixer_paths_overlay_dynamic.xml \
+    mixer_paths_overlay_static.xml \
+    sound_trigger_mixer_paths.xml \
+    sound_trigger_platform_info.xml \
+    usbv2_audio_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
@@ -142,9 +153,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstagefright_foundation-v33
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
+PRODUCT_PACKAGES += \
+    dax_default.xml \
+    media_codecs_dolby_audio.xml
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -158,9 +169,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/fingerprint/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
-    $(LOCAL_PATH)/configs/fingerprint/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc
+PRODUCT_PACKAGES += \
+    uinput_fpc_kl \
+    uinput_fpc_idc
 
 # Health
 PRODUCT_PACKAGES += \
@@ -170,8 +181,8 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti_recovery
 
 # HotwordEnrollement app permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+PRODUCT_PACKAGES += \
+    privapp_permissions_hotword.xml
 
 # IFAAService
 PRODUCT_PACKAGES += \
@@ -183,8 +194,8 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml
 
 # Input
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/kona-mtp-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/kona-mtp-snd-card_Button_Jack.kl
+PRODUCT_PACKAGES += \
+    kona_mtp_snd_card_Button_Jack
 
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
@@ -219,18 +230,18 @@ PRODUCT_VENDOR_PROPERTIES += \
 endif
 
 # Media Configs
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_kona_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kona.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance_kona.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_kona.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance_kona_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_kona_vendor.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_kona.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_kona.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
-    $(LOCAL_PATH)/configs/media/system_properties.xml:$(TARGET_COPY_OUT_VENDOR)/etc/system_properties.xml
+PRODUCT_PACKAGES += \
+    media_profiles_V1_0.xml \
+    media_codecs.xml \
+    media_codecs_c2.xml \
+    media_codecs_kona_vendor.xml \
+    media_codecs_performance_c2.xml \
+    media_codecs_performance_kona.xml \
+    media_codecs_performance_kona_vendor.xml \
+    media_profiles.xml \
+    media_profiles_kona.xml \
+    media_profiles_vendor.xml \
+    system_properties.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
@@ -294,17 +305,17 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
-    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+PRODUCT_PACKAGES += \
+    powerhint.json \
+    msm_irqbalance.conf
 
 # Public libraries
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+PRODUCT_PACKAGES += \
+    public_libraries.txt
 
 # QDCM
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/qdcm/,$(TARGET_COPY_OUT_VENDOR)/etc)
+PRODUCT_PACKAGES += \
+    qdcm_calib_data
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -333,8 +344,8 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl-xiaomi \
     android.hardware.sensors@1.0-service
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+PRODUCT_PACKAGES += \
+    hals.conf
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
@@ -400,10 +411,10 @@ PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink \
     firmware_wlan_mac.bin_symlink
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
-    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+PRODUCT_PACKAGES += \
+    WCNSS_qcom_cfg.ini \
+    p2p_supplicant_overlay.conf \
+    wpa_supplicant_overlay.conf
 
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
