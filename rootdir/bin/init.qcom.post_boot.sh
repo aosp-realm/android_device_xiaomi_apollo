@@ -1035,8 +1035,6 @@ function configure_memory_parameters() {
         echo 0 > /proc/sys/vm/watermark_boost_factor
     fi
 
-    configure_zram_parameters
-
     configure_read_ahead_kb_values
 
     enable_swap
