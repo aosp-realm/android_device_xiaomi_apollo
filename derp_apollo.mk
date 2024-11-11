@@ -14,6 +14,9 @@ $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 # Inherit from apollo device
 $(call inherit-product, device/xiaomi/apollo/device.mk)
 
+TARGET_NOT_USES_BLUR := true
+TARGET_EXCLUDE_BACKUPTOOL := true
+
 PRODUCT_NAME := derp_apollo
 PRODUCT_DEVICE := apollo
 PRODUCT_MANUFACTURER := Xiaomi
