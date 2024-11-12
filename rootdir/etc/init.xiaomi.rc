@@ -55,20 +55,6 @@ on boot
     chown system system /sys/class/power_supply/battery/input_suspend
 
 # NFC
-service qti_esepowermanager_service_1_1 /vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-    override
-    class hal
-    user system
-    group nfc system
-    disabled
-
-service secureelement-hal_1_2 /vendor/bin/hw/vendor.qti.secure_element@1.2-service
-    override
-    class hal
-    user system
-    group system
-    disabled
-
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     override
     class early_hal
@@ -77,8 +63,6 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     disabled
 
 on boot
-    enable qti_esepowermanager_service_1_1
-    enable secureelement-hal_1_2
     enable vendor.nfc_hal_service
 
 # NVMAC
