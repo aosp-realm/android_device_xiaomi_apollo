@@ -241,7 +241,7 @@ vendor/lib64/libnanopb.so
 vendor/lib64/libofflinelog.so
 vendor/lib64/libos.so
 vendor/lib64/libremosaic_wrapper.so
-vendor/lib64/libremosaichvx_stub.so;DISABLE_CHECKELF
+vendor/lib64/libremosaichvx_stub.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/libsdk_sr.so
 vendor/lib64/libsnpe_adsp.so
