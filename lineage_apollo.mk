@@ -13,8 +13,6 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Google Apps
 WITH_GMS := true
-TARGET_CORE_GMS := true
-TARGET_CORE_GMS_EXTRAS := true
 TARGET_DEFAULT_PIXEL_LAUNCHER := true
 
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
