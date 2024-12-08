@@ -72,6 +72,10 @@ EOF
             [ "$2" = "" ] && return 0
             sed -i 's|ro.product.vendor.device|ro.vendor.radio.midevice|g' "${2}"
             ;;
+        vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
+            [ "$2" = "" ] && return 0
+            "${SIGSCAN}" -p "9A 0A 00 94" -P "1F 20 03 D5" -f "${2}"
+            ;;
         vendor/etc/init/init.mi_thermald.rc)
             [ "$2" = "" ] && return 0
             sed -i "/seclabel u:r:mi_thermald:s0/d" "${2}"
