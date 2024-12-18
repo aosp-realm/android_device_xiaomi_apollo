@@ -363,6 +363,10 @@ PRODUCT_PACKAGES += \
 # Update
 AB_OTA_UPDATER := false
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.xiaomi
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti
