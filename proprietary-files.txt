@@ -643,6 +643,8 @@ vendor/etc/init/feature_enabler_client.rc
 
 # Fingerprint
 vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.default.so;FIX_SONAME
+system/usr/idc/uinput-fpc.idc:vendor/usr/idc/uinput-fpc.idc
+system/usr/keylayout/uinput-fpc.kl:vendor/usr/keylayout/uinput-fpc.kl
 
 # FM
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
@@ -1107,6 +1109,7 @@ vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
+vendor/etc/sensors/hals.conf
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libnotifyaudiohal.so
 vendor/lib64/libsensorcal.so
